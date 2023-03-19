@@ -9,7 +9,7 @@ const webpack = require('webpack');
 // - vue (3)
 // - typescript (if enabled in the config), and the corresponding tsconfig.json
 // - typescript config for vue (if enabled in the config)
-// 
+//
 // The following extensions might be overridden by the application
 // - vue-loader (for v3) - to ensure it will override the apos core vue-loader
 // - @vue/compiler-sfc - not really required, should be resolved from this module
@@ -20,7 +20,7 @@ const webpack = require('webpack');
 // - postcss-{html,css,scss}
 // NOTE: If context is enabled (see below), this module should introduce ALL of
 // apos core dependencies required for the src build
-// 
+//
 // In order to release that, we need to offer override options for almost
 // everything.
 module.exports = {
@@ -82,7 +82,8 @@ module.exports = {
             },
             // Add support for <style> tags.
             // The scss/postcss support is added by the core?
-            // TODO options so devs can ignore paths (e.g. tailwind)
+            // TODO options so devs can ignore paths (e.g. tailwind) or completely
+            // disable the rule.
             {
               test: /\.css$/,
               use: [
@@ -90,14 +91,6 @@ module.exports = {
                 'style-loader',
                 'css-loader',
                 'postcss-loader'
-                // This is conflcting with tailwind css import, configured in other modules.
-                // {
-                //   loader: 'css-loader',
-                //   options: {
-                //     // esModule: true,
-                //     sourceMap: true
-                //   }
-                // }
               ]
             }
           ]
