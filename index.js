@@ -87,13 +87,17 @@ module.exports = {
               test: /\.css$/,
               use: [
                 'vue-style-loader',
-                {
-                  loader: 'css-loader',
-                  options: {
-                    // esModule: true,
-                    sourceMap: true
-                  }
-                }
+                'style-loader',
+                'css-loader',
+                'postcss-loader'
+                // This is conflcting with tailwind css import, configured in other modules.
+                // {
+                //   loader: 'css-loader',
+                //   options: {
+                //     // esModule: true,
+                //     sourceMap: true
+                //   }
+                // }
               ]
             }
           ]
