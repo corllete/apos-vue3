@@ -79,20 +79,20 @@ module.exports = {
               options: {
                 appendTsSuffixTo: [ /\.vue$/ ]
               }
-            },
+            }
             // Add support for <style> tags.
             // The scss/postcss support is added by the core?
             // TODO options so devs can ignore paths (e.g. tailwind) or completely
             // disable the rule.
-            {
-              test: /\.css$/,
-              use: [
-                'vue-style-loader',
-                'style-loader',
-                'css-loader',
-                'postcss-loader'
-              ]
-            }
+            // {
+            //   test: /\.css$/,
+            //   use: [
+            //     'vue-style-loader',
+            //     'style-loader',
+            //     'css-loader',
+            //     'postcss-loader'
+            //   ]
+            // }
           ]
         },
         plugins: [
