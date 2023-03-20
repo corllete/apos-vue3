@@ -67,7 +67,7 @@ module.exports = {
               options: {
                 // XXX- It is really not clear how to proceed here.
                 // Generally we want esm.
-                // esModule: true,
+                esModule: true,
                 sourceMap: true
               }
             },
