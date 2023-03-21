@@ -1,6 +1,7 @@
 # Apostrophe CMS module bundle for Vue 3 Webpack configuration
 
 This bundle provides a Vue 3 Webpack configuration for Apostrophe CMS public builds.
+Do not use in production yet, but only for PoC and demonstration purposes. It's a work in progress.
 
 ## Installation
 
